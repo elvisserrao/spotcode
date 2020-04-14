@@ -1,0 +1,77 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+inherit_mode:
+  merge:
+    - Exclude
+
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.6.5
+  DisplayCopNames: true
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'connect.rb'
+    - 'config.ru'
+    - 'config/**/*'
+    - 'node_modules/**/*'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'test/test_helper.rb'
+    - 'tmp/**/*'
+    - 'Rakefile'
+    - 'scaffold_controller.rb'
+    - 'scaffold_model.rb'
+
+# Lint/RaiseException:
+#   Enabled: true
+
+# Lint/StructNewOverride:
+#   Enabled: true
+
+Metrics/AbcSize:
+  Exclude:
+
+Layout/LineLength:
+  Exclude:
+    - Gemfile
+    - Rakefile
+    - app/views/**/*.json.jbuilder
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+
+# RSpec/ExampleLength:
+#   Enabled: false
+
+# RSpec/EmptyExampleGroup:
+#   Enabled: false
+
+# RSpec/MultipleExpectations:
+#   Enabled: false
+
+# RSpec/InstanceVariable:
+#   Enabled: true
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - test/channels/application_cable/connection_test.rb
+
+Style/Documentation:
+  Enabled: False
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
